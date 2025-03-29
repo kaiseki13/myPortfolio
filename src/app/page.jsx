@@ -204,10 +204,10 @@ const Portfolio = () => {
               {/* Main Photo */}
               <div className="absolute inset-0 p-1 bg-gradient-to-br from-cyan-400 to-amber-500 rounded-lg">
                 <div className="w-full h-full overflow-hidden rounded-lg bg-[#121621] p-0.5">
-                  <img
-                    src={`${process.env.NODE_ENV === "production" ? "/myPortfolio" : ""}/mifoto.jpg`}
-                    alt="Giovanni Podbersig"
-                  />
+                    <img
+      src="/myPortfolio/mifoto.jpg"
+      alt="Giovanni Podbersig"
+    />
                 </div>
               </div>
 
