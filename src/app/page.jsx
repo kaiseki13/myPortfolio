@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
 
@@ -44,10 +45,10 @@ const Portfolio = () => {
     try {
       // Encode the subject for email
       const subject = encodeURIComponent(
-        formData.subject || "Portfolio Contact Form",
+        formData.subject || "Portfolio Contact Form"
       );
       const body = encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`,
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
       );
 
       // Create mailto link and open it
@@ -167,7 +168,9 @@ const Portfolio = () => {
           <div
             className="absolute top-1/2 left-1/3 w-48 h-48 bg-gradient-to-br from-amber-600 to-amber-800 transform -translate-x-1/2 -translate-y-1/2 rotate-45"
             style={{
-              transform: `translate3d(-50%, -50%, 0) rotate(${45 + scrollY * 0.05}deg)`,
+              transform: `translate3d(-50%, -50%, 0) rotate(${
+                45 + scrollY * 0.05
+              }deg)`,
             }}
           ></div>
 
@@ -175,7 +178,9 @@ const Portfolio = () => {
           <div
             className="absolute top-1/3 right-1/4 w-40 h-40 bg-gradient-to-br from-gray-700 to-gray-900 transform translate-x-1/2 -translate-y-1/2 rotate-12"
             style={{
-              transform: `translate3d(50%, -50%, 0) rotate(${12 - scrollY * 0.03}deg)`,
+              transform: `translate3d(50%, -50%, 0) rotate(${
+                12 - scrollY * 0.03
+              }deg)`,
             }}
           ></div>
 
@@ -191,7 +196,9 @@ const Portfolio = () => {
           <div
             className="absolute top-1/3 right-1/3 w-16 h-16 rounded-full bg-gradient-to-r from-amber-300 to-orange-400 opacity-80 blur-md"
             style={{
-              transform: `translate3d(${Math.sin(scrollY * 0.01) * 20}px, ${Math.cos(scrollY * 0.01) * 20}px, 0)`,
+              transform: `translate3d(${Math.sin(scrollY * 0.01) * 20}px, ${
+                Math.cos(scrollY * 0.01) * 20
+              }px, 0)`,
             }}
           ></div>
         </div>
@@ -204,10 +211,13 @@ const Portfolio = () => {
               {/* Main Photo */}
               <div className="absolute inset-0 p-1 bg-gradient-to-br from-cyan-400 to-amber-500 rounded-lg">
                 <div className="w-full h-full overflow-hidden rounded-lg bg-[#121621] p-0.5">
-                    <img
-      src="/myPortfolio/mifoto.jpg"
-      alt="Giovanni Podbersig"
-    />
+                  <Image
+                    src="/myPortfolio/mifoto.jpg"
+                    alt="Giovanni Podbersig"
+                    width={300}
+                    height={300}
+                    className="rounded-lg w-full h-full object-cover"
+                  />
                 </div>
               </div>
 
