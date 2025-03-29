@@ -45,10 +45,10 @@ const Portfolio = () => {
     try {
       // Encode the subject for email
       const subject = encodeURIComponent(
-        formData.subject || "Portfolio Contact Form"
+        formData.subject || "Portfolio Contact Form",
       );
       const body = encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`,
       );
 
       // Create mailto link and open it
@@ -212,7 +212,7 @@ const Portfolio = () => {
               <div className="absolute inset-0 p-1 bg-gradient-to-br from-cyan-400 to-amber-500 rounded-lg">
                 <div className="w-full h-full overflow-hidden rounded-lg bg-[#121621] p-0.5">
                   <Image
-                    src="/myPortfolio/mifoto.jpg"
+                    src="../../public/mifoto.JPG"
                     alt="Giovanni Podbersig"
                     width={300}
                     height={300}
