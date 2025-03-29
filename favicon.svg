@@ -1,0 +1,83 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Glowing background effect -->
+  <defs>
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="outerGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feFlood flood-color="#00ffff" flood-opacity="0.5" result="glow" />
+      <feComposite in="glow" in2="blur" operator="in" result="glowBlur" />
+      <feComposite in="SourceGraphic" in2="glowBlur" operator="over" />
+    </filter>
+    
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#80ffff" />
+      <stop offset="50%" stop-color="#00ffff" />
+      <stop offset="100%" stop-color="#008b8b" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Dark background -->
+  <rect x="0" y="0" width="32" height="32" rx="4" fill="#121621" />
+  
+  <!-- Bright outline effect for the P -->
+  <path 
+    d="M 12,7
+       L 12,25
+       L 16,25
+       L 16,17
+       L 22,17
+       C 24.5,17 26.5,15 26.5,12
+       C 26.5,9 24.5,7 22,7
+       Z
+       M 16,11
+       L 21,11
+       C 22,11 22.5,11.5 22.5,12
+       C 22.5,12.5 22,13 21,13
+       L 16,13
+       Z" 
+    fill="none" 
+    stroke="rgba(0, 255, 255, 0.8)" 
+    stroke-width="0.7"
+    filter="url(#outerGlow)" 
+  />
+  
+  <!-- Main P shape -->
+  <path 
+    d="M 12,7
+       L 12,25
+       L 16,25
+       L 16,17
+       L 22,17
+       C 24.5,17 26.5,15 26.5,12
+       C 26.5,9 24.5,7 22,7
+       Z
+       M 16,11
+       L 21,11
+       C 22,11 22.5,11.5 22.5,12
+       C 22.5,12.5 22,13 21,13
+       L 16,13
+       Z" 
+    fill="url(#neonGradient)" 
+    filter="url(#neonGlow)" 
+  />
+  
+  <!-- Inner highlight -->
+  <path 
+    d="M 16,7
+       L 16,8
+       L 22,8
+       C 23,8 24,8.5 24.5,9
+       L 25.5,8
+       C 24.5,7.5 23.2,7 22,7
+       Z" 
+    fill="#ffffff" 
+    opacity="0.5" 
+  />
+  
+  <!-- Extra glow spot for emphasis -->
+  <circle cx="12.5" cy="7.5" r="0.8" fill="#ffffff" opacity="0.8" />
+</svg>
