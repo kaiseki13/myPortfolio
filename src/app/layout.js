@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 // app/layout.js
 export const metadata = {
   title: "Giovanni Podbersig | Full-Stack Developer",
-  description: "Portfolio of Giovanni Podbersig, Full-Stack Developer",
+  description: "Portfolio of Giovanni Podbersig, Full-Stack Developer ",
 };
 
 export default function RootLayout({ children }) {
