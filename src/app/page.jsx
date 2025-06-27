@@ -242,7 +242,7 @@ const Portfolio = () => {
               <div className="absolute inset-0 p-1 bg-gradient-to-br from-cyan-400 via-purple-500 to-amber-500 rounded-2xl animate-glow">
                 <div className="w-full h-full overflow-hidden rounded-2xl bg-[#121621] p-0.5 transition-all duration-500 group-hover:scale-105">
                   <Image
-                    src="/mifoto.JPG"
+                    src="/immagine.jpg"
                     alt="Giovanni Podbersig"
                     width={384}
                     height={384}
